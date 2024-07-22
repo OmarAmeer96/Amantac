@@ -33,6 +33,7 @@ jobs:
 
       - name: Build and Distribute App
         env:
+          APP_ID: ${{ secrets.APP_ID }}
           FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
           FIREBASE_OPTIONS_ANDROID_API_KEY: ${{ secrets.FIREBASE_OPTIONS_ANDROID_API_KEY }}
           FIREBASE_OPTIONS_ANDROID_APP_ID: ${{ secrets.FIREBASE_OPTIONS_ANDROID_APP_ID }}

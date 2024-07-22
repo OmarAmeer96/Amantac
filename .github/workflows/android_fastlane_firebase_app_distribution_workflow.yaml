@@ -23,6 +23,7 @@ jobs:
         with:
           channel: stable
 
+      # If there was an error, then run this: "cd android" then "bundle lock --add-platform x86_64-linux"
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:

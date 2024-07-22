@@ -14,9 +14,7 @@ platform :android do
       release_notes: <<-NOTES
       🎉🎉🎉 AMANTAC "V1" is now available for testing! 🎉🎉🎉
 
-      🚀 The latest version includes exciting new features that we would like you to test before we move to production. Your feedback is crucial to ensure everything runs smoothly. 🚀
-
-      📝 Please review the new features and let us know if you encounter any issues or have suggestions for improvements.
+      📝 Please review the new features and let me know if you encounter any issues or have suggestions for improvements.
 
       Best regards,
       Omar Ameer 😊

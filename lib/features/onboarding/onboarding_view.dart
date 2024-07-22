@@ -22,7 +22,7 @@ class OnboardingView extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 30.h),
           child: Center(
             child: Text(
-              'This is a simple onboarding screen.',
+              'This is a simple onboarding view.',
               style: TextStyle(
                 fontSize: 20.sp,
               ),

@@ -45,6 +45,7 @@ FIREBASE_OPTIONS_IOS_APP_ID: ${{ secrets.FIREBASE_OPTIONS_IOS_APP_ID }}
           bundle exec fastlane android firebase_distribution
         working-directory: android
 
+
 # Mohamed Ali's: Android Fastlane with Firebase App Distribution Workflow ------------------------------------
 
 # name: Android Fastlane with Firebase App Distribution Workflow

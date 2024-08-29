@@ -1,4 +1,4 @@
-# MINE: Android Fastlane with Firebase App Distribution Workflow ------------------------------------
+# MINE: Android Fastlane with Firebase App Distribution Workflow ------------------------------------------------------------------------------------------------------------
 
 name: Android Fastlane with Firebase App Distribution Workflow
 
@@ -35,18 +35,36 @@ jobs:
 
       - name: Build and Distribute App
         env:
-APP_ID: ${{ secrets.APP_ID }}
-FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
-FIREBASE_OPTIONS_ANDROID_API_KEY: ${{ secrets.FIREBASE_OPTIONS_ANDROID_API_KEY }}
-FIREBASE_OPTIONS_ANDROID_APP_ID: ${{ secrets.FIREBASE_OPTIONS_ANDROID_APP_ID }}
-FIREBASE_OPTIONS_IOS_API_KEY: ${{ secrets.FIREBASE_OPTIONS_IOS_API_KEY }}
-FIREBASE_OPTIONS_IOS_APP_ID: ${{ secrets.FIREBASE_OPTIONS_IOS_APP_ID }}
+          APP_ID: ${{ secrets.APP_ID }}
+          FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
+          FIREBASE_OPTIONS_ANDROID_API_KEY: ${{ secrets.FIREBASE_OPTIONS_ANDROID_API_KEY }}
+          FIREBASE_OPTIONS_ANDROID_APP_ID: ${{ secrets.FIREBASE_OPTIONS_ANDROID_APP_ID }}
+          FIREBASE_OPTIONS_IOS_API_KEY: ${{ secrets.FIREBASE_OPTIONS_IOS_API_KEY }}
+          FIREBASE_OPTIONS_IOS_APP_ID: ${{ secrets.FIREBASE_OPTIONS_IOS_APP_ID }}
         run: |
           bundle exec fastlane android firebase_distribution
         working-directory: android
 
+      # - name: Send Email on Success
+      #   if: success()
+      #   uses: dawidd6/action-send-mail@v3
+      #   with:
+      #     server_address: smtp.gmail.com
+      #     server_port: 465
+      #     username: ${{ secrets.SMTP_USERNAME }}
+      #     password: ${{ secrets.SMTP_PASSWORD }}
+      #     subject: Build and Distribution Successful
+      #     body: |
+      #       Dear AMANTAC Founders,
+      #       🎉🎉🎉 AMANTAC "V1" is now available for testing! 🎉🎉🎉
+      #       🚀 The latest version includes exciting new features that we would like you to test before we move to production. Your feedback is crucial to ensure everything runs smoothly. 🚀
 
-# Mohamed Ali's: Android Fastlane with Firebase App Distribution Workflow ------------------------------------
+      #       Please review the new features and let us know if you encounter any issues or have suggestions for improvements.
+      #       Best regards,
+      #       Omar Ameer 😊
+      #     to: omar.ameer2333@gmail.com, omar82199@gmail.com, nooranhossam209@gmail.com
+      #     from: ${{ secrets.SMTP_USERNAME }}
+# Mohamed Ali's: Android Fastlane with Firebase App Distribution Workflow ------------------------------------------------------------------------------------------------------------
 
 # name: Android Fastlane with Firebase App Distribution Workflow
 
@@ -102,24 +120,3 @@ FIREBASE_OPTIONS_IOS_APP_ID: ${{ secrets.FIREBASE_OPTIONS_IOS_APP_ID }}
 #           cd android
 #           bundle exec fastlane android firebase_distribution
 
-# --------------------------------------------------------------------------------------------------
-
-# - name: Send Email on Success
-#   if: success()
-#   uses: dawidd6/action-send-mail@v3
-#   with:
-#     server_address: smtp.gmail.com
-#     server_port: 465
-#     username: ${{ secrets.SMTP_USERNAME }}
-#     password: ${{ secrets.SMTP_PASSWORD }}
-#     subject: Build and Distribution Successful
-#     body: |
-#       Dear AMANTAC Founders,
-#       🎉🎉🎉 AMANTAC "V1" is now available for testing! 🎉🎉🎉
-#       🚀 The latest version includes exciting new features that we would like you to test before we move to production. Your feedback is crucial to ensure everything runs smoothly. 🚀
-
-#       Please review the new features and let us know if you encounter any issues or have suggestions for improvements.
-#       Best regards,
-#       Omar Ameer 😊
-#     to: omar.ameer2333@gmail.com, omar82199@gmail.com, nooranhossam209@gmail.com
-#     from: ${{ secrets.SMTP_USERNAME }}

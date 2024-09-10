@@ -2,7 +2,7 @@
     <application
         android:label="@string/app_name"
         android:name="${applicationName}"
-        android:icon="@mipmap/app_icon_final">
+        android:icon="@mipmap/amantac_logo_1">
         <activity
             android:name=".MainActivity"
             android:exported="true"

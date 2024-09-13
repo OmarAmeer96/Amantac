@@ -3,9 +3,9 @@
 name: Android Fastlane with Firebase App Distribution Workflow
 
 on:
-  push:
-    branches:
-      - mobile-app-stable
+  # push:
+  #   branches:
+  #     - mobile-app-stable
 
 jobs:
   distribute_to_firebase:

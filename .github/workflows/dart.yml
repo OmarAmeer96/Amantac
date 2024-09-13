@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     steps:
       # Checkout code from the mobile-app-stable branch
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           ref: mobile-app-stable # Ensure it checks out the mobile-app-stable branch
 

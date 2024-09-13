@@ -11,7 +11,6 @@ jobs:
     name: 🎉 iOS Build
     runs-on: macos-latest
     steps:
-      # Checkout the code from the mobile-app-stable branch
       - uses: actions/checkout@v3
       with:
           ref: mobile-app-stable  # This ensures the workflow pulls from the correct branch

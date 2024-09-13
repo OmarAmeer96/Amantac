@@ -1,9 +1,9 @@
 name: iOS-ipa-build
 
 on:
-  push:
-    branches:
-      - mobile-app-stable
+  # push:
+  #   branches:
+  #     - mobile-app-stable
   workflow_dispatch:
 
 jobs:

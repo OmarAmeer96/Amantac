@@ -1,10 +1,10 @@
 name: iOS-ipa-build
 
 on:
-  push:
-    branches:
-      - mobile-app-stable
-  # workflow_dispatch:
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - mobile-app-stable
 
 jobs:
   build-ios:
@@ -12,8 +12,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: mobile-app-stable  # This ensures the workflow pulls from the correct branch
 
       - uses: subosito/flutter-action@v2
         with:
